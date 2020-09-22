@@ -14,10 +14,10 @@ public class SomeApp {
 
     private static void readDirectories(Path path) {
         // Method reference
-        DirectoryStream.Filter<Path> filter = Files::isRegularFile;
+//        DirectoryStream.Filter<Path> filter = Files::isRegularFile;
 
         //with Lambda
-//        DirectoryStream.Filter<Path> filter = (Path entry) -> Files.isRegularFile(entry);
+        DirectoryStream.Filter<Path> filter = p -> Files.isRegularFile(p);
 
         // Regular implemented method
 //        DirectoryStream.Filter<Path> filter =
