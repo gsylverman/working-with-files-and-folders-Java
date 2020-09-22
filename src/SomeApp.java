@@ -10,6 +10,12 @@ public class SomeApp {
 
         Path directory = FileSystems.getDefault().getPath("folderThree", "Dir1");
         readDirectories(directory);
+
+        // File separator
+        String separator = File.separator;  // java IO
+        System.out.println(separator);
+        separator = FileSystems.getDefault().getSeparator(); // java NIO
+        System.out.println(separator);
     }
 
     private static void readDirectories(Path path) {
