@@ -1,2 +1,0 @@
-inner 2
-SOme text
