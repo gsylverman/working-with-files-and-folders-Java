@@ -17,11 +17,11 @@ public class Cc {
     }
 
     private static void readDirectory(Path path, DirectoryStream.Filter<Path> filter) {
-        try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(path, filter)){
+        try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(path, filter)) {
             for (Path item : directoryStream) {
                 System.out.println(item.getFileName());
             }
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 

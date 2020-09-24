@@ -5,6 +5,7 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 
 public class PrintFileName extends SimpleFileVisitor<Path> {
+
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
         System.out.println(file.toAbsolutePath());
@@ -19,13 +20,8 @@ public class PrintFileName extends SimpleFileVisitor<Path> {
 
     @Override
     public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
-        System.out.println("Error accesing file "+file.toAbsolutePath() + " "+exc.getMessage());
+        System.out.println("Error accesing file " + file.toAbsolutePath() + " " + exc.getMessage());
         return FileVisitResult.CONTINUE;
-    }
-
-    public static void main(String[] args) {
-
-
     }
 
 }

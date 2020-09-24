@@ -8,7 +8,7 @@ public class SomeMain {
         Path pathdir2 = FileSystems.getDefault().getPath("e:");
         try {
             Files.walkFileTree(pathdir2, new PrintFileName());
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
